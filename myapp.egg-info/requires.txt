@@ -1,5 +1,0 @@
-pyramid
-WebError
-pyramid_mongodb
-pymongo
-pyramid_chameleon
