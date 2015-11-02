@@ -16,7 +16,7 @@ PyramidMongoapp ia an application built over Python, Pyramid and MongoDB. The my
 
 ### Installation Instructions for Linux
 
-You need install [MongoDB](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/) and [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/) on your Linux system.
+You need to install [MongoDB](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/) and [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/) on your Linux system.
 
 
 **Ubuntu Linux Execution Environment**:
