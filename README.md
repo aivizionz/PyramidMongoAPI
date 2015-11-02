@@ -66,10 +66,10 @@ Create a collection session under sessiondb, structure should be as below:
 2. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
 3. Web API: http://localhost:6543/users/lastname=bachan .These api returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc)
 
-    http://localhost:6543/users/proFesSion=AcTor      # apis filter parameters are case-insensitive
-    http://localhost:6543/v1/users/proFesSion=AcTor   # apis with versioning
-    http://localhost:6543/v1/users/genre=film
-            
+        http://localhost:6543/users/proFesSion=AcTor      # apis filter parameters are case-insensitive
+        http://localhost:6543/v1/users/proFesSion=AcTor   # apis with versioning
+        http://localhost:6543/v1/users/genre=film
+
 4. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
 5. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
 
