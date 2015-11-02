@@ -90,7 +90,7 @@ Create a collection session under sessiondb, structure should be as below:
 
       
 
-## Creators
+### Creator
 
 **Rajesh Mathew**
 
