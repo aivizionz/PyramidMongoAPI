@@ -64,15 +64,30 @@ Create a collection session under sessiondb, structure should be as below:
 1. Web API: http://localhost:6543/login. This api authenticates authenticates a user using login/password passed in a JSON payload and verifies against a simple data structure , MongoDB
 
 2. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
-3. Web API: http://localhost:6543/users/(key=value) .These api returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc)
+3. Web API: http://localhost:6543/users/(filter: key=value) .These api returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc)
 
-        http://localhost:6543/users/lastname=cruise
+        http://localhost:6543/users/lastname=cruise       # filter where lastname=cruise
         http://localhost:6543/users/proFesSion=AcTor      # apis filter parameters are case-insensitive
         http://localhost:6543/v1/users/proFesSion=AcTor   # apis with versioning
-        http://localhost:6543/v1/users/genre=film
+        http://localhost:6543/v1/users/genre=film         # filter where genre=film
 
-4. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
-5. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
+4. Web API: http://localhost:6543/users/(filter: key=value)/(groupby). These api returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc) and then group them by another parameter (profession, genre).
+
+        http://localhost:6543/users/city=mumbai/genre           # filter where city=mumbai and groupby genre
+        http://localhost:6543/v1/users/ciTy=CaliFornia/genre    # api with versioning and filter parameters are case-insensitive
+        http://localhost:6543/v1/users/ciTy=MumBai/profession   # filter where city=mumbai and groupby profession
+
+5. Web API: http://localhost:6543/status/(component).This api checks and returns the status of the component requested.
+    
+        http://localhost:6543/status/mongod                    # filter component mongod
+        http://localhost:6543/v1/status/firefox                # api with versioning and filter component mongod 
+
+6. Web API: http://localhost:6543/files/(directory path). This api returns the list of files in a given directory. components 
+    
+        http://localhost:6543/files/pyramidmongoapp           # filter with directory path '/pyramidmongoapp'
+        http://localhost:6543/v1/files/pyramidmongoapp/myapp/static    # api with versioning and filter  with directory path '/pyramidmongoapp/myapp/static'
+
+      
 
 
 
