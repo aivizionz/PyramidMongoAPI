@@ -94,5 +94,6 @@ Create a collection session under sessiondb, structure should be as below:
 
 **Rajesh Mathew**
 
-* <https://github.com/mathewraj>
+* github: <https://github.com/mathewraj>
+* twitter: <https://twitter.com/rajeshmathewk>
 
