@@ -1,6 +1,6 @@
 # PyramidMongoapp
 
-PyramidMongoapp ia an application built over Python, Pyramid and MongoDB. The myapp Web API is designed with RESTFUL interface and JSON Message Format.
+PyramidMongoapp ia an application built over Python, Pyramid and MongoDB. The app Web API is designed with RESTFUL interface and JSON Message Format.
 
 
 ## Table of contents
@@ -46,7 +46,7 @@ All other required libraries bootstrap, jquery etc are included in the app.
 
 ### Testing the app in local machine
 
-You could access the myapp Web API through browser or Linux curl command on the default view provided by pserve on localhost:6543.
+You could access the app Web API through browser or Linux curl command on the default view provided by pserve on localhost:6543.
 
 Before testing ensure that you have configured the MongoDB database and collections as required by pyramidmongoapp. You can use mongo shell and create databases: usersdb and sessiondb.
 
