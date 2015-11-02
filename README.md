@@ -1,6 +1,6 @@
 # PyramidMongoapp
 
-PyramidMongoapp ia an application built over Python, Pyramid and MongoDB. The myapp Web API is designed with RESTFUL interface and JSON as Message Format.
+PyramidMongoapp ia an application built over Python, Pyramid and MongoDB. The myapp Web API is designed with RESTFUL interface and JSON Message Format.
 
 
 ## Table of contents
