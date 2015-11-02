@@ -64,7 +64,7 @@ Create a collection session under sessiondb, structure should be as below:
 1. Web API: http://localhost:6543/login. This api authenticates authenticates a user using login/password passed in a JSON payload and verifies against a simple data structure , MongoDB
 
 2. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
-3. Web API: http://localhost:6543/users/<key=value> .These api returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc)
+3. Web API: http://localhost:6543/users/(key=value) .These api returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc)
 
         http://localhost:6543/users/lastname=cruise
         http://localhost:6543/users/proFesSion=AcTor      # apis filter parameters are case-insensitive
