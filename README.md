@@ -75,8 +75,8 @@ Create a collection session under sessiondb, structure should be as below:
 4. Web API: http://localhost:6543/users/(filter: key=value)/(groupby). These apis returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc) and then group them by another parameter (profession, genre).
 
         http://localhost:6543/users/city=mumbai/genre          # filter where city=mumbai and groupby genre
-        http://localhost:6543/v1/users/ciTy=CaliFornia/genre   # api with versioning and filter parameters are case-insensitive
-        http://localhost:6543/v1/users/ciTy=MumBai/profession  # filter where city=mumbai and groupby profession
+        http://localhost:6543/v1/users/ciTy=CaliFornia/geNre   # api with versioning and filter parameters are case-insensitive
+        http://localhost:6543/v1/users/ciTy=MumBai/ProfeSsion  # filter where city=mumbai and groupby profession
 
 5. Web API: http://localhost:6543/status/(component).These apis checks and returns the status of the component requested.
     
