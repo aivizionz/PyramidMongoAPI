@@ -51,7 +51,15 @@ You could access the app Web API through browser or Linux curl command on the de
 Before testing ensure that you have configured the MongoDB database and collections as required by pyramidmongoapp. You can use mongo shell and create databases: usersdb and sessiondb.
 
 Create a collection users under usersdb, for users collection schema refer USERS  in [jsondata](https://github.com/mathewraj/pyramidmongoapp/blob/master/myapp/jsondata.py).
- 
+
+
+    $ mongo
+    > use usersdb
+    > db.users.find({"firstname" : "amitabh"})
+      { "_id" : ObjectId("563673b2a5127f48276b748c"), "city" : "mumbai", "firstname" : "amitabh", "lastname" : "bachan", "profession" : [ "actor", "producer" ], "country" : "india", "genre" : [ "film", "bollywood" ] }
+
+
+
 Create a collection session under sessiondb, session collection schema should be as below:
 
     $ mongo
