@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.md')).read()
 
-requires = ['pyramid', 'WebError', 'pyramid_mongodb', 'pymongo', 'pyramid_chameleon']
+requires = ['pyramid', 'WebError', 'PasteScript', 'pyramid_mongodb', 'pymongo', 'pyramid_chameleon']
 
 setup(name='myapp',
       version='0.0',
