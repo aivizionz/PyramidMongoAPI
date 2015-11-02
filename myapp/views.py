@@ -43,6 +43,7 @@ def get_user_search(request):
     grpby = grpby.split('/')
     if len(grpby) >= 2:
         grpby = str(grpby[1])
+        grpby = grpby.lower()
         # return user_filter(fkey, fvalue)
         return users_flt_groupby(fkey, fvalue, grpby)
     else:
