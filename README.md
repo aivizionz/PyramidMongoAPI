@@ -48,7 +48,7 @@ All other required libraries bootstrap, jquery etc are included in the app.
 
 You could access the myapp Web API through browser or Linux curl command on the default view provided by pserve on localhost:6543.
 
-1. Before testing ensure that you have configured the MongoDB database and collections as required by pyramidmongoapp. You can use mongo shell and create databases: usersdb and sessiondb.
+Before testing ensure that you have configured the MongoDB database and collections as required by pyramidmongoapp. You can use mongo shell and create databases: usersdb and sessiondb.
 
 Create a collection users under usersdb, refer USERS collection  in [jsondata](https://github.com/mathewraj/pyramidmongoapp/blob/master/myapp/jsondata.py).
  
@@ -61,10 +61,17 @@ Create a collection session under sessiondb, structure should be as below:
 
 
 
-2. Web API: http://localhost:6543/login. This api authenticates authenticates a user using login/password passed in a JSON payload and verifies against a simple data structure , MongoDB
+1. Web API: http://localhost:6543/login. This api authenticates authenticates a user using login/password passed in a JSON payload and verifies against a simple data structure , MongoDB
 
+2. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
+3. Web API: http://localhost:6543/users/lastname=bachan .These api returns all users in the database filtered by url parameters (lastname, firstname, city, profession, genre etc)
 
-3. Web API: http://localhost:6543/login. This api   returns all users in the MongoDB database usersdb.
+    http://localhost:6543/users/proFesSion=AcTor      # apis filter parameters are case-insensitive
+    http://localhost:6543/v1/users/proFesSion=AcTor   # apis with versioning
+    http://localhost:6543/v1/users/genre=film
+            
+4. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
+5. Web API: http://localhost:6543/users. This api   returns all users in the MongoDB database usersdb.
 
 
 
