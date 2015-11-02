@@ -10,6 +10,12 @@ pip-log.txt
 *_test
 .coverage
 
+#sublime cruft
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+
 #emacs cruft
 *~
 *#*
