@@ -127,7 +127,9 @@ Pagination is not implemented in the present API. But can be supported with exis
 Traditionally pagination data used to be send in post request  along with payload or for get request in URL query parameters.  
 
 Better approach is to use the Link Header for Pagination as below. 
-Link: <http://localhost:6543/users/?page=2>; rel="next"
+
+    Link: <http://localhost:6543/users/?page=2>; rel="next" mongo
+    
 
 We can also specify how many items to receive like (users?page=3&per_page=100) but,
 for technical reasons, many client side libraries/framework  misbehaves and can cause browser crashes (ex: AngularJS  with ie8 and  ie9)  hence not recommended. It is good to stick with a default records of 10 or 20 per page.
