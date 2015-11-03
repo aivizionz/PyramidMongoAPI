@@ -98,6 +98,51 @@ Create a collection session under sessiondb, session collection schema should be
 
       
 
+
+
+# Technologies Used:
+
+Pyramid (http://www.pylonsproject.org/) : Pyramid is a simple, fast and less opinionated web framework that can be used to build complex web applications with components of our choice, like ORMs( SQL Alchemy, Ming), templating languages(Chameleon, Mako, jinja2) etc.
+Also in my case, my present org is using zope and custom web framework  and we are  migrating all our app modules to pyramid.  Pyramid will have less learning curve for people already using zope or pylons.
+
+pyramid_chameleon (http://pyramid-chameleon.readthedocs.org/en/latest/) : No special preference on this templating system for Pyramid. Used this one as it is mentioned/used in pyramid tutorial docs by default.
+
+pyramid_mongodb (https://github.com/niallo/pyramid_mongodb ): pyramid_mongodb is a simple scaffold for the Pyramid Web Framework. It provides URL mapping via traversal and persistence via MongoDB. This template speeds up development (for proof of concept) as it can create the base  project structure and config files (ini, setup files etc) required for the app project.
+
+MongoDB (https://www.mongodb.org/ ) : MongoDB is a very popular NoSQL (document-oriented) database designed for ease of development. 
+
+pymongo (http://api.mongodb.org/python/current/api/pymongo/index.html#module-pymongo) : pymongo is the recommended python driver for MongoDB
+
+
+# API Versioning:
+
+API versioning helps smoothen application changes with API version transitions where we can continue to offer older APIs for a period of time. 
+I have used the url for the API versioning(most popular) starting with the letter v<version no> , ex v1 (http://localhost:6543/v1/users). it's good to avoid dot notation like 1.2 , as v1 or v2 is more readable and easy to follow.
+
+There are other options for API versioning  like using the header for API versions or a combination of both (URL and header). 
+
+
+# Pagination: 
+
+Pagination is not implemented in the present API. But can be supported with existing design. 
+
+Traditionally pagination data used to be send in post request  along with payload or for get request in URL query parameters.  
+
+Better approach is to use the Link Header for Pagination as below. 
+Link: <http://localhost:6543/users/?page=2>; rel="next"
+
+We can also specify how many items to receive like (users?page=3&per_page=100) but,
+for technical reasons, many client side libraries/framework  misbehaves and can cause browser crashes (ex: AngularJS  with ie8 and  ie9)  hence not recommended. It is good to stick with a default records of 10 or 20 per page.
+
+
+# Coding Standards and Backend(Server Side) architecture pattern:
+
+I have used Sublime2 as my IDE with Flake8 Lint for python which confirms to pep8 and pyflakes standards. Meaningful method names and variables are used in most cases.
+
+For  Backend (server side) I have used Model and ViewController like pattern  with all routes in __init__.py file , View-Controller  together in views.py and Model (data access layer) in models.py. Further server side optimisations can be done for the existing app.
+ 
+
+
 ### Creator
 
 **Rajesh Mathew**
