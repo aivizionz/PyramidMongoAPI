@@ -7,7 +7,7 @@ PyramidMongoapp ia an application built over Python, Pyramid and MongoDB. The ap
 
 * [Quick start](#quick-start)
 * [Documentation](#documentation)
-* [Creators](#creators)
+* [Creators](#creator)
 
 
 
