@@ -1,7 +1,7 @@
 from pyramid.config import Configurator
 # from pyramid.events import subscriber
 from pyramid.events import NewRequest
-import pymongo
+from pymongo import MongoClient
 
 from myapp.resources import Root
 
@@ -10,12 +10,11 @@ def main(global_config, **settings):
     """ This function returns a WSGI application.
     """
     config = Configurator(settings=settings, root_factory=Root)
-    config.include('pyramid_chameleon')
-    config.add_view('myapp.views.my_view',
-                    context='myapp:resources.Root',
-                    renderer='myapp:templates/mytemplate.pt')
+
     config.add_static_view('static', 'myapp:static')
 
+    # Route for Pyramid Home page
+    config.add_route('home', '/')
     # Route for login, logout
     config.add_route('login', '/login')
     config.add_route('logout', '/logout')
@@ -32,23 +31,21 @@ def main(global_config, **settings):
     config.add_route('status', '/status/{service}')
     config.add_route('statusv1', '/v1/status/{service}')
 
-    # MongoDB = pymongo.MongoClient()
-    # if 'pyramid_debugtoolbar' in set(settings.values()):
-    #     class MongoDB(pymongo.Connection):
-    #         def __html__(self):
-    #             return 'MongoDB: <b>{}></b>'.format(self)
-    db_uri = settings['mongodb.url']
-    conn = pymongo.MongoClient(db_uri)
-    config.registry.settings['mongodb_conn'] = conn
-
     # MongoDB configuration
     def add_mongo_db(event):
         settings = event.request.registry.settings
         # url = settings['mongodb.url']
-        db_name = settings['mongodb.db_name']
-        db = settings['mongodb_conn'][db_name]
-        event.request.db = db
+        # import pdb; pdb.set_trace()
+        # db_name = settings['mongodb.db_name']
+        conn = settings['mongodb_conn']
+        event.request.conn = conn
 
+    db_uri = settings['mongodb.url']
+    # MongoDB = pymongo.MongoClient
+    # import pdb; pdb.set_trace()
+    conn = MongoClient(db_uri)
+    config.registry.settings['mongodb_conn'] = conn
     config.add_subscriber(add_mongo_db, NewRequest)
     config.scan('myapp')
+    config.include('pyramid_chameleon')
     return config.make_wsgi_app()
