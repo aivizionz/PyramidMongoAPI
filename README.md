@@ -28,6 +28,7 @@ You need to install [MongoDB](https://docs.mongodb.org/manual/tutorial/install-m
     $ pip install pyramid pyramid_mongodb pyramid_chameleon
     $ git clone git@github.com:mathewraj/pyramidmongoapp.git
     $ cd pyramidmongoapp
+    $ git checkout oo_version1
     $ python setup.py develop
 
 
