@@ -41,13 +41,13 @@ class UserModel(object):
         udata = list(self.db.users.find({}, {"_id": 0}))
         return udata
 
-    def users_filterby(self, fkey, fvalue, request=None):
+    def users_filterby(self, fkey, fvalue):
         """ This method will use the mongodb find function and return users by filter
         """
         udata = list(self.db.users.find({fkey: fvalue}, {"_id": 0}))
         return udata
 
-    def users_flt_groupby(self, fkey, fvalue, groupby, request=None):
+    def users_flt_groupby(self, fkey, fvalue, groupby):
         """ This method will use the mongodb aggregate function and return user data by filter and groupby
         """
         if groupby == "profession":
