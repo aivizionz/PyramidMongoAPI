@@ -1,10 +1,17 @@
-#python cruft
+#python/packages cruft
 *.pyc
 *.egg
 *.egg-info
 .noseids
 *prof*
 pip-log.txt
+dist
+build
+eggs
+parts
+var
+sdist
+
 
 #test cruft
 *_test
@@ -26,7 +33,7 @@ node_modules
 coverage
 test-results.xml
 gruntSrc
-dist
+
 
 
 #virtualenv cruft
