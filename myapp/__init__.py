@@ -34,15 +34,12 @@ def main(global_config, **settings):
     # MongoDB configuration
     def add_mongo_db(event):
         settings = event.request.registry.settings
-        # url = settings['mongodb.url']
-        # import pdb; pdb.set_trace()
         # db_name = settings['mongodb.db_name']
         conn = settings['mongodb_conn']
         event.request.conn = conn
 
     db_uri = settings['mongodb.url']
     # MongoDB = pymongo.MongoClient
-    # import pdb; pdb.set_trace()
     conn = MongoClient(db_uri)
     config.registry.settings['mongodb_conn'] = conn
     config.add_subscriber(add_mongo_db, NewRequest)
