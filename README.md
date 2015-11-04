@@ -140,7 +140,7 @@ for technical reasons, many client side libraries/framework  misbehaves and can 
 
 I have used Sublime2 as my IDE with Flake8 Lint for python which confirms to pep8 and pyflakes standards. Meaningful method/function names and variables are used in most cases. Doc strings added to each method/function.
 
-For  server side (Backend) I have used Model and ViewController like pattern  with all routes in (/__init__.py) file , View-Controller  together in (views.py) and Model, the data access layer in (models.py). Further server side optimisations can be done for the existing app.
+For  server side (Backend) I have used Model and ViewController like pattern  with all routes in (\__init__.py) file , View-Controller  together in (views.py) and Model, the data access layer in (models.py). Further server side optimisations can be done for the existing app.
  
 
 
