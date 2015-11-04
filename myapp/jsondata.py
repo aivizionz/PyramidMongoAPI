@@ -1,3 +1,4 @@
+# Sample data for users collection
 USERS = [
     {
         "firstname": "sonu",
@@ -120,50 +121,3 @@ USERS = [
         "genre": ["film", "hollywood"]
     }
 ]
-
-
-# def abc1():
-#     for i in USERS:
-#         if i['city'] == 'Mumbai' and 'Actor' in i['profession']:
-#             print i
-
-
-# def abc():
-#     for i in USERS:
-#         if i['city'] == 'Mumbai':
-#             print i
-
-
-# def abc2():
-#     filter = u'profession=actor'
-#     key, value = filter.split('=')
-#     key = str(key.lower())
-#     value = str(value.lower())
-#     # others = request.matchdict['other']
-#     users = []
-#     for i in USERS:
-#         if key == 'profession' or key == 'genre':
-#             for j in i[key]:
-#                 if value == j.lower():
-#                     users.append(i.copy())
-#         else:
-#             if i[key].lower() == value:
-#                 users.append(i.copy())
-#     print users
-
-
-# def abc3():
-#     filter = u'city=mumbai'
-#     key, value = filter.split('=')
-#     key = str(key.lower())
-#     value = str(value.lower())
-#     # others = request.matchdict['other']
-#     users = []
-#     for i in USERS:
-#         if i[key].lower() == value.lower():
-#             users.append(i.copy())
-
-#     print users
-
-# if __name__ == '__main__':
-#     abc2()

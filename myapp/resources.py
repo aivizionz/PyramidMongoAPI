@@ -1,5 +1,5 @@
 class Root(object):
-    # import pdb;pdb.set_trace()
-
+    """ Root Class
+    """
     def __init__(self, request):
         self.request = request

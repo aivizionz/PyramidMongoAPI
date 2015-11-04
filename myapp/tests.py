@@ -4,6 +4,8 @@ from pyramid import testing
 
 
 class ViewTests(unittest.TestCase):
+    """ ViewTests Class
+    """
     def setUp(self):
         self.config = testing.setUp()
 
