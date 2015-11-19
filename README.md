@@ -13,6 +13,8 @@ PyramidMongoapp ia an application built over Python, Pyramid and MongoDB. The ap
 
 ## Quick start 
 
+For reference, the installation and demo has been recorded , and the video has been uploaded to below youtube channel.
+https://youtu.be/HW1jT0qhnlE
 
 ### Installation Instructions for Linux
 
