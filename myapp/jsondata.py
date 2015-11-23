@@ -121,3 +121,8 @@ USERS = [
         "genre": ["film", "hollywood"]
     }
 ]
+
+SESSION = [{"userid": "test1", "password": "test4321"},
+           {"userid": "test2", "password": "test9876"},
+           {"userid": "test3", "password": "test5432"},
+           {"userid": "test4", "password": "test6543"}]
