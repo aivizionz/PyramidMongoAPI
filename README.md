@@ -51,7 +51,14 @@ All other required libraries bootstrap, jquery etc are included in the app.
 
 You could access the app Web API through browser or Linux curl command on the default view provided by pserve on localhost:6543.
 
-Before testing ensure that you have configured the MongoDB database and collections as required by pyramidmongoapp. You can use mongo shell and create databases: usersdb and sessiondb.
+
+Before testing ensure that you have configured the MongoDB database and collections as required by pyramidmongoapp.
+
+For reference, the configuration of MongoDB using mongo shell has been recorded , and the video has been uploaded to below youtube channel.
+https://youtu.be/TGQTfVZPjwQ
+
+
+You can use mongo shell and create databases: usersdb and sessiondb.
 
 Create a collection users under usersdb, for users collection schema refer USERS  in [jsondata](https://github.com/mathewraj/pyramidmongoapp/blob/oo_version1/myapp/jsondata.py).
 
