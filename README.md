@@ -101,7 +101,7 @@ Create a collection session under sessiondb, session collection schema should be
 ### Technologies Used:
 
 Pyramid (http://www.pylonsproject.org/) : Pyramid is a simple, fast and less opinionated web framework that can be used to build complex web applications with components of our choice, like ORMs( SQL Alchemy, Ming), templating languages(Chameleon, Mako, jinja2) etc.
-Also in my case, my present org is using zope and custom web framework  and we are  migrating all our app modules to pyramid.  Pyramid will have less learning curve for people already using zope or pylons.
+Also Pyramid will have less learning curve for people already using zope or pylons.
 
 pyramid_chameleon (http://pyramid-chameleon.readthedocs.org/en/latest/) : No special preference on this templating system for Pyramid. Used this one as it is mentioned/used in pyramid tutorial docs by default.
 
@@ -132,7 +132,7 @@ Better approach is to use the Link Header for Pagination as below.
     
 
 We can also specify how many items to receive like (users?page=3&per_page=100) but,
-for technical reasons, many client side libraries/framework  misbehaves and can cause browser crashes (ex: AngularJS  with ie8 and  ie9)  hence not recommended. It is good to stick with  default records of 10 or 20 per page.
+for technical reasons, many client side libraries/framework  misbehaves and can cause browser crashes (ex: older browsers like ie8 and  ie9)  hence not recommended. It is good to stick with  default records of 10 or 20 per page.
 
 
 ### Coding Standards and Server Side (Backend) architecture:
