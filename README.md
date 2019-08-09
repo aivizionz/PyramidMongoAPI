@@ -147,6 +147,6 @@ For  server side (Backend) I have used Model and ViewController like pattern  wi
 
 **Rajesh Mathew**
 
-* github: <https://github.com/mathewraj>
-* twitter: <https://twitter.com/rajeshmathewk>
+* github: <https://github.com/aivizionz>
+* twitter: <https://twitter.com/aivizionz>
 
